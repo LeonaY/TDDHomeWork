@@ -1,0 +1,9 @@
+D:\YanFile\Git\Repos\Traning\TDDDay1HomeWork\TDDDay1HomeWorkTest\bin\Debug\TDDDay1HomeWorkTest.dll
+D:\YanFile\Git\Repos\Traning\TDDDay1HomeWork\TDDDay1HomeWorkTest\bin\Debug\TDDDay1HomeWorkTest.pdb
+D:\YanFile\Git\Repos\Traning\TDDDay1HomeWork\TDDDay1HomeWorkTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\YanFile\Git\Repos\Traning\TDDDay1HomeWork\TDDDay1HomeWorkTest\bin\Debug\TDDDay1HomeWork.dll
+D:\YanFile\Git\Repos\Traning\TDDDay1HomeWork\TDDDay1HomeWorkTest\bin\Debug\TDDDay1HomeWork.pdb
+D:\YanFile\Git\Repos\Traning\TDDDay1HomeWork\TDDDay1HomeWorkTest\bin\Debug\zh-Hant\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\YanFile\Git\Repos\Traning\TDDDay1HomeWork\TDDDay1HomeWorkTest\obj\Debug\TDDDay1HomeWorkTest.csprojResolveAssemblyReference.cache
+D:\YanFile\Git\Repos\Traning\TDDDay1HomeWork\TDDDay1HomeWorkTest\obj\Debug\TDDDay1HomeWorkTest.dll
+D:\YanFile\Git\Repos\Traning\TDDDay1HomeWork\TDDDay1HomeWorkTest\obj\Debug\TDDDay1HomeWorkTest.pdb
