@@ -54,10 +54,25 @@ namespace ShoppingCartTests
         }
 
         [TestMethod]
-        public void GetTotalPrice_BuyHarryPotter_FirstAndSecondAndThirdAndFourthEpisode()
+        public void GetTotalPrice_BuyHarryPotter_First_Second_Third_FourthEpisode()
         {
             //arrange
             var expected = 320;
+            var potterShoppingCart = new PotterShoppingCart();
+            var buyBooks = SetBuyFourBook();
+
+            //act
+            var actual = potterShoppingCart.GetTotalPrice(buyBooks);
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetTotalPrice_BuyHarryPotter_First_Second_Third_Fourth_FifthEpisode()
+        {
+            //arrange
+            var expected = 375;
             var potterShoppingCart = new PotterShoppingCart();
             var buyBooks = SetBuyFourBook();
 
