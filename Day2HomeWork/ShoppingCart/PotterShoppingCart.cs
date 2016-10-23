@@ -8,19 +8,27 @@ namespace ShoppingCart
     {
         public int GetTotalPrice(IEnumerable<BookInfoModels> buyBooks)
         {
-            double discount = 0;
-            var result = 0;
+            var result = 0;          
 
-            if (buyBooks.Select(x => x.BookID).Distinct().Count() == 2)
-            {
-                discount = 0.05;
-            }
-            else if (buyBooks.Select(x => x.BookID).Distinct().Count() == 3)
-            {
-                discount = 0.1;
-            }
+            result = Convert.ToInt16(buyBooks.Sum(x => x.BookPrice) * (1 - GetDiscount(buyBooks)));
+            return result;
+        }
 
-            result = Convert.ToInt16(buyBooks.Sum(x => x.BookPrice) * (1 - discount));
+        private double GetDiscount(IEnumerable<BookInfoModels> buyBooks)
+        {
+            double result = 0;
+            var differentBookCount = buyBooks.Select(x => x.BookID).Distinct().Count();
+                        
+            //key放判斷優惠的本數，value放折扣
+            Dictionary<int, double> discountConditions = new Dictionary<int, double>();
+            discountConditions.Add(2, 0.05);
+            discountConditions.Add(3, 0.1);
+            discountConditions.Add(4, 0.2);
+
+            result = discountConditions.ContainsKey(differentBookCount) 
+                     ? discountConditions[differentBookCount]
+                     : 0;
+
             return result;
         }
     }
