@@ -38,6 +38,21 @@ namespace ShoppingCartTests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void GetTotalPrice_BuyHarryPotter_FirstAndSecondAndThirdEpisode()
+        {
+            //arrange
+            var expected = 270;
+            var potterShoppingCart = new PotterShoppingCart();
+            var buyBooks = SetBuyThirdBook();
+
+            //act
+            var actual = potterShoppingCart.GetTotalPrice(buyBooks);
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
         private IEnumerable<BookInfoModels> SetBuyBook()
         {
             var books = new List<BookInfoModels> {
@@ -50,6 +65,15 @@ namespace ShoppingCartTests
             var books = new List<BookInfoModels> {
                 new BookInfoModels { BookID = "001", BookPrice = 100},
                 new BookInfoModels { BookID = "002", BookPrice = 100}
+            };
+            return books;
+        }
+        private IEnumerable<BookInfoModels> SetBuyThirdBook()
+        {
+            var books = new List<BookInfoModels> {
+                new BookInfoModels { BookID = "001", BookPrice = 100},
+                new BookInfoModels { BookID = "002", BookPrice = 100},
+                new BookInfoModels { BookID = "003", BookPrice = 100}
             };
             return books;
         }
