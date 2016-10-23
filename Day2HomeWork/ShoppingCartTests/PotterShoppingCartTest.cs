@@ -74,7 +74,7 @@ namespace ShoppingCartTests
             //arrange
             var expected = 375;
             var potterShoppingCart = new PotterShoppingCart();
-            var buyBooks = SetBuyFourBook();
+            var buyBooks = SetBuyFiveBook();
 
             //act
             var actual = potterShoppingCart.GetTotalPrice(buyBooks);
@@ -114,6 +114,17 @@ namespace ShoppingCartTests
                 new BookInfoModels { BookID = "002", BookPrice = 100},
                 new BookInfoModels { BookID = "003", BookPrice = 100},
                 new BookInfoModels { BookID = "004", BookPrice = 100}
+            };
+            return books;
+        }
+        private IEnumerable<BookInfoModels> SetBuyFiveBook()
+        {
+            var books = new List<BookInfoModels> {
+                new BookInfoModels { BookID = "001", BookPrice = 100},
+                new BookInfoModels { BookID = "002", BookPrice = 100},
+                new BookInfoModels { BookID = "003", BookPrice = 100},
+                new BookInfoModels { BookID = "004", BookPrice = 100},
+                new BookInfoModels { BookID = "005", BookPrice = 100}
             };
             return books;
         }

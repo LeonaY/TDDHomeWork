@@ -24,6 +24,7 @@ namespace ShoppingCart
             discountConditions.Add(2, 0.05);
             discountConditions.Add(3, 0.1);
             discountConditions.Add(4, 0.2);
+            discountConditions.Add(5, 0.25);
 
             result = discountConditions.ContainsKey(differentBookCount) 
                      ? discountConditions[differentBookCount]
