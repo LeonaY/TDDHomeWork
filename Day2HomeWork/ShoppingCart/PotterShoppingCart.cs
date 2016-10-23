@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ShoppingCart
 {
     public class PotterShoppingCart
     {
-        public object GetTotalPrice(IEnumerable<BookInfoModels> buyBooks)
+        public int GetTotalPrice(IEnumerable<BookInfoModels> buyBooks)
         {
-            throw new NotImplementedException();
+            return buyBooks.Sum(x => x.BookPrice);
         }
     }
 }
