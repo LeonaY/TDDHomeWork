@@ -89,7 +89,22 @@ namespace ShoppingCartTests
             //arrange
             var expected = 370;
             var potterShoppingCart = new PotterShoppingCart();
-            var buyBooks = SetBuyTwoDifferentTwoSameeBook();
+            var buyBooks = SetScenario6BuyBookList();
+
+            //act
+            var actual = potterShoppingCart.GetTotalPrice(buyBooks);
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetTotalPriceTest_第一集買了一本第二三集各買了兩本_should_be_460()
+        {
+            //arrange
+            var expected = 460;
+            var potterShoppingCart = new PotterShoppingCart();
+            var buyBooks = SetScenario7BuyBookList();
 
             //act
             var actual = potterShoppingCart.GetTotalPrice(buyBooks);
@@ -143,7 +158,7 @@ namespace ShoppingCartTests
             };
             return books;
         }
-        private IEnumerable<PotterBookInfoModels> SetBuyTwoDifferentTwoSameeBook()
+        private IEnumerable<PotterBookInfoModels> SetScenario6BuyBookList()
         {
             var books = new List<PotterBookInfoModels> {
                 new PotterBookInfoModels { BookID = "001"},
@@ -153,6 +168,17 @@ namespace ShoppingCartTests
             };
             return books;
         }
-        
+        private IEnumerable<PotterBookInfoModels> SetScenario7BuyBookList()
+        {
+            var books = new List<PotterBookInfoModels> {
+                new PotterBookInfoModels { BookID = "001"},
+                new PotterBookInfoModels { BookID = "002"},
+                new PotterBookInfoModels { BookID = "002"},
+                new PotterBookInfoModels { BookID = "003"},
+                new PotterBookInfoModels { BookID = "003"}
+            };
+            return books;
+        }
+
     }
 }
