@@ -15,8 +15,8 @@ namespace TDDDay1HomeWorkTest
             var expected = new int[] { 6, 15, 24, 21 };
 
             Calculator calculator = new Calculator();
-            var sourceList = GetSourctList();
-            var actual = calculator.GetSumOfGroupByCol<ProductModel>(3, "Cost", sourceList);
+            var products = GetSourctList();
+            var actual = calculator.GetSumOfGroupByCol<ProductModel>(3, "Cost", products);
 
             CollectionAssert.AreEqual(expected, actual);
         }
@@ -27,8 +27,8 @@ namespace TDDDay1HomeWorkTest
             var expected = new int[] { 50, 66, 60 };
 
             Calculator calculator = new Calculator();
-            var sourceList = GetSourctList();
-            var actual = calculator.GetSumOfGroupByCol<ProductModel>(4, "Revenue", sourceList);
+            var products = GetSourctList();
+            var actual = calculator.GetSumOfGroupByCol<ProductModel>(4, "Revenue", products);
 
             CollectionAssert.AreEqual(expected, actual);
         }

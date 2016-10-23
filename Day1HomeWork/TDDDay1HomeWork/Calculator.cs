@@ -15,7 +15,7 @@ namespace TDDDay1HomeWork
         /// <param name="columnName">計算欄位</param>
         /// <param name="sourceList">計算清單</param>
         /// <returns></returns>
-        public List<int> GetSumOfGroupByCol<T>(int groupOfNum, string columnName, IEnumerable<T> sourceList)
+        public List<int> GetSumOfGroupByCol<T>(int groupOfNum, string columnName, IEnumerable<T> sources)
         {
             List<int> result = new List<int>();
             int currentIndex = 0;
@@ -25,11 +25,11 @@ namespace TDDDay1HomeWork
 
             if (info != null)
             {
-                foreach (var item in sourceList)
+                foreach (var item in sources)
                 {                    
                     sum += Convert.ToInt16(info.GetValue(item).ToString());
                     currentIndex++;
-                    if (currentIndex % groupOfNum == 0 || currentIndex == sourceList.Count())
+                    if (currentIndex % groupOfNum == 0 || currentIndex == sources.Count())
                     {
                         result.Add(sum);
                         sum = 0;
