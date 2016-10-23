@@ -1,8 +1,8 @@
 ﻿namespace ShoppingCart
 {
-    public class BookInfoModels
+    public class PotterBookInfoModels
     {
         public string BookID { get; set; }
-        public int BookPrice { get; set; }
+        public int BookPrice { get { return 100; } }
     }
 }

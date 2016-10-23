@@ -89,7 +89,7 @@ namespace ShoppingCartTests
             //arrange
             var expected = 370;
             var potterShoppingCart = new PotterShoppingCart();
-            var buyBooks = SetBuyFiveBook();
+            var buyBooks = SetBuyTwoDifferentTwoSameeBook();
 
             //act
             var actual = potterShoppingCart.GetTotalPrice(buyBooks);
@@ -98,58 +98,58 @@ namespace ShoppingCartTests
             Assert.AreEqual(expected, actual);
         }
 
-        private IEnumerable<BookInfoModels> SetBuyBook()
+        private IEnumerable<PotterBookInfoModels> SetBuyBook()
         {
-            var books = new List<BookInfoModels> {
-                new BookInfoModels { BookID = "001", BookPrice = 100}
+            var books = new List<PotterBookInfoModels> {
+                new PotterBookInfoModels { BookID = "001"}
             };
             return books;
         }
-        private IEnumerable<BookInfoModels> SetBuyTwoBook()
+        private IEnumerable<PotterBookInfoModels> SetBuyTwoBook()
         {
-            var books = new List<BookInfoModels> {
-                new BookInfoModels { BookID = "001", BookPrice = 100},
-                new BookInfoModels { BookID = "002", BookPrice = 100}
+            var books = new List<PotterBookInfoModels> {
+                new PotterBookInfoModels { BookID = "001"},
+                new PotterBookInfoModels { BookID = "002"}
             };
             return books;
         }
-        private IEnumerable<BookInfoModels> SetBuyThirdBook()
+        private IEnumerable<PotterBookInfoModels> SetBuyThirdBook()
         {
-            var books = new List<BookInfoModels> {
-                new BookInfoModels { BookID = "001", BookPrice = 100},
-                new BookInfoModels { BookID = "002", BookPrice = 100},
-                new BookInfoModels { BookID = "003", BookPrice = 100}
+            var books = new List<PotterBookInfoModels> {
+                new PotterBookInfoModels { BookID = "001"},
+                new PotterBookInfoModels { BookID = "002"},
+                new PotterBookInfoModels { BookID = "003"}
             };
             return books;
         }
-        private IEnumerable<BookInfoModels> SetBuyFourBook()
+        private IEnumerable<PotterBookInfoModels> SetBuyFourBook()
         {
-            var books = new List<BookInfoModels> {
-                new BookInfoModels { BookID = "001", BookPrice = 100},
-                new BookInfoModels { BookID = "002", BookPrice = 100},
-                new BookInfoModels { BookID = "003", BookPrice = 100},
-                new BookInfoModels { BookID = "004", BookPrice = 100}
+            var books = new List<PotterBookInfoModels> {
+                new PotterBookInfoModels { BookID = "001"},
+                new PotterBookInfoModels { BookID = "002"},
+                new PotterBookInfoModels { BookID = "003"},
+                new PotterBookInfoModels { BookID = "004"}
             };
             return books;
         }
-        private IEnumerable<BookInfoModels> SetBuyFiveBook()
+        private IEnumerable<PotterBookInfoModels> SetBuyFiveBook()
         {
-            var books = new List<BookInfoModels> {
-                new BookInfoModels { BookID = "001", BookPrice = 100},
-                new BookInfoModels { BookID = "002", BookPrice = 100},
-                new BookInfoModels { BookID = "003", BookPrice = 100},
-                new BookInfoModels { BookID = "004", BookPrice = 100},
-                new BookInfoModels { BookID = "005", BookPrice = 100}
+            var books = new List<PotterBookInfoModels> {
+                new PotterBookInfoModels { BookID = "001"},
+                new PotterBookInfoModels { BookID = "002"},
+                new PotterBookInfoModels { BookID = "003"},
+                new PotterBookInfoModels { BookID = "004"},
+                new PotterBookInfoModels { BookID = "005"}
             };
             return books;
         }
-        private IEnumerable<BookInfoModels> SetBuyTwoDifferentTwoSameeBook()
+        private IEnumerable<PotterBookInfoModels> SetBuyTwoDifferentTwoSameeBook()
         {
-            var books = new List<BookInfoModels> {
-                new BookInfoModels { BookID = "001", BookPrice = 100},
-                new BookInfoModels { BookID = "002", BookPrice = 100},
-                new BookInfoModels { BookID = "003", BookPrice = 100},
-                new BookInfoModels { BookID = "003", BookPrice = 100}
+            var books = new List<PotterBookInfoModels> {
+                new PotterBookInfoModels { BookID = "001"},
+                new PotterBookInfoModels { BookID = "002"},
+                new PotterBookInfoModels { BookID = "003"},
+                new PotterBookInfoModels { BookID = "003"}
             };
             return books;
         }
