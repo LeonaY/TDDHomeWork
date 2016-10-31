@@ -14,8 +14,10 @@ namespace ShoppingCartTests
             //arrange
             var expected = 100;
             var potterShoppingCart = new PotterShoppingCart();
-            var buyBooks = SetBuyBook();
-                
+            var buyBooks = new List<PotterBookInfoModels> {
+                new PotterBookInfoModels { BookID = "001"}
+            };
+
             //act
             var actual = potterShoppingCart.GetTotalPrice(buyBooks);
 
@@ -29,7 +31,10 @@ namespace ShoppingCartTests
             //arrange
             var expected = 190;
             var potterShoppingCart = new PotterShoppingCart();
-            var buyBooks = SetBuyTwoBook();
+            var buyBooks = new List<PotterBookInfoModels> {
+                new PotterBookInfoModels { BookID = "001"},
+                new PotterBookInfoModels { BookID = "002"}
+            };
 
             //act
             var actual = potterShoppingCart.GetTotalPrice(buyBooks);
@@ -44,7 +49,11 @@ namespace ShoppingCartTests
             //arrange
             var expected = 270;
             var potterShoppingCart = new PotterShoppingCart();
-            var buyBooks = SetBuyThirdBook();
+            var buyBooks = new List<PotterBookInfoModels> {
+                new PotterBookInfoModels { BookID = "001"},
+                new PotterBookInfoModels { BookID = "002"},
+                new PotterBookInfoModels { BookID = "003"}
+            };
 
             //act
             var actual = potterShoppingCart.GetTotalPrice(buyBooks);
@@ -59,7 +68,12 @@ namespace ShoppingCartTests
             //arrange
             var expected = 320;
             var potterShoppingCart = new PotterShoppingCart();
-            var buyBooks = SetBuyFourBook();
+            var buyBooks = new List<PotterBookInfoModels> {
+                new PotterBookInfoModels { BookID = "001"},
+                new PotterBookInfoModels { BookID = "002"},
+                new PotterBookInfoModels { BookID = "003"},
+                new PotterBookInfoModels { BookID = "004"}
+            };
 
             //act
             var actual = potterShoppingCart.GetTotalPrice(buyBooks);
@@ -74,7 +88,13 @@ namespace ShoppingCartTests
             //arrange
             var expected = 375;
             var potterShoppingCart = new PotterShoppingCart();
-            var buyBooks = SetBuyFiveBook();
+            var buyBooks = new List<PotterBookInfoModels> {
+                new PotterBookInfoModels { BookID = "001"},
+                new PotterBookInfoModels { BookID = "002"},
+                new PotterBookInfoModels { BookID = "003"},
+                new PotterBookInfoModels { BookID = "004"},
+                new PotterBookInfoModels { BookID = "005"}
+            };
 
             //act
             var actual = potterShoppingCart.GetTotalPrice(buyBooks);
@@ -89,7 +109,12 @@ namespace ShoppingCartTests
             //arrange
             var expected = 370;
             var potterShoppingCart = new PotterShoppingCart();
-            var buyBooks = SetScenario6BuyBookList();
+            var buyBooks = new List<PotterBookInfoModels> {
+                new PotterBookInfoModels { BookID = "001"},
+                new PotterBookInfoModels { BookID = "002"},
+                new PotterBookInfoModels { BookID = "003"},
+                new PotterBookInfoModels { BookID = "003"}
+            };
 
             //act
             var actual = potterShoppingCart.GetTotalPrice(buyBooks);
@@ -104,7 +129,13 @@ namespace ShoppingCartTests
             //arrange
             var expected = 460;
             var potterShoppingCart = new PotterShoppingCart();
-            var buyBooks = SetScenario7BuyBookList();
+            var buyBooks = new List<PotterBookInfoModels> {
+                new PotterBookInfoModels { BookID = "001"},
+                new PotterBookInfoModels { BookID = "002"},
+                new PotterBookInfoModels { BookID = "002"},
+                new PotterBookInfoModels { BookID = "003"},
+                new PotterBookInfoModels { BookID = "003"}
+            };
 
             //act
             var actual = potterShoppingCart.GetTotalPrice(buyBooks);
@@ -112,73 +143,7 @@ namespace ShoppingCartTests
             //assert
             Assert.AreEqual(expected, actual);
         }
-
-        private IEnumerable<PotterBookInfoModels> SetBuyBook()
-        {
-            var books = new List<PotterBookInfoModels> {
-                new PotterBookInfoModels { BookID = "001"}
-            };
-            return books;
-        }
-        private IEnumerable<PotterBookInfoModels> SetBuyTwoBook()
-        {
-            var books = new List<PotterBookInfoModels> {
-                new PotterBookInfoModels { BookID = "001"},
-                new PotterBookInfoModels { BookID = "002"}
-            };
-            return books;
-        }
-        private IEnumerable<PotterBookInfoModels> SetBuyThirdBook()
-        {
-            var books = new List<PotterBookInfoModels> {
-                new PotterBookInfoModels { BookID = "001"},
-                new PotterBookInfoModels { BookID = "002"},
-                new PotterBookInfoModels { BookID = "003"}
-            };
-            return books;
-        }
-        private IEnumerable<PotterBookInfoModels> SetBuyFourBook()
-        {
-            var books = new List<PotterBookInfoModels> {
-                new PotterBookInfoModels { BookID = "001"},
-                new PotterBookInfoModels { BookID = "002"},
-                new PotterBookInfoModels { BookID = "003"},
-                new PotterBookInfoModels { BookID = "004"}
-            };
-            return books;
-        }
-        private IEnumerable<PotterBookInfoModels> SetBuyFiveBook()
-        {
-            var books = new List<PotterBookInfoModels> {
-                new PotterBookInfoModels { BookID = "001"},
-                new PotterBookInfoModels { BookID = "002"},
-                new PotterBookInfoModels { BookID = "003"},
-                new PotterBookInfoModels { BookID = "004"},
-                new PotterBookInfoModels { BookID = "005"}
-            };
-            return books;
-        }
-        private IEnumerable<PotterBookInfoModels> SetScenario6BuyBookList()
-        {
-            var books = new List<PotterBookInfoModels> {
-                new PotterBookInfoModels { BookID = "001"},
-                new PotterBookInfoModels { BookID = "002"},
-                new PotterBookInfoModels { BookID = "003"},
-                new PotterBookInfoModels { BookID = "003"}
-            };
-            return books;
-        }
-        private IEnumerable<PotterBookInfoModels> SetScenario7BuyBookList()
-        {
-            var books = new List<PotterBookInfoModels> {
-                new PotterBookInfoModels { BookID = "001"},
-                new PotterBookInfoModels { BookID = "002"},
-                new PotterBookInfoModels { BookID = "002"},
-                new PotterBookInfoModels { BookID = "003"},
-                new PotterBookInfoModels { BookID = "003"}
-            };
-            return books;
-        }
+        
 
     }
 }
